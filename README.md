@@ -8,11 +8,11 @@
 
 ## What I Last Did
 
-Added a memory-log field to the Section 0 personalization schema and Section 22 coaching instructions: distinct from the tracking log (raw numbers) and strategy log (experiment history), this is the ongoing narrative of actual sessions and progress, meant to be read before every response so coaching doesn't start cold each time.
+Added a Daily Nutrition Metric to Section 5: four tracked categories (protein g, vegetable servings, carbohydrate servings, meat/protein-source mix), scored Met/Under/Over rather than exact calorie counting. Response Format (Section 25) now itemizes these instead of a single "estimated protein" line, and a nutrition log joins the Section 0 personalization schema.
 
 ## What Is Open Right Now
 
-Confirming the bot integration correctly loads both this repo's protocol and the private personal data source (now including the memory log) together at runtime, and that writes-back (new recipes, workout variations, tracking entries, strategy notes, memory-log entries) land in the personal source, not here.
+Confirming the bot integration correctly loads both this repo's protocol and the private personal data source (now including memory and nutrition logs) together at runtime, and that writes-back (recipes, workout variations, tracking entries, strategy notes, memory-log entries, nutrition-log entries) land in the personal source, not here.
 
 ## What Did Not Work (and What I Learned)
 
@@ -20,14 +20,14 @@ Confirming the bot integration correctly loads both this repo's protocol and the
 
 ## What Is Next
 
-1. Verify end-to-end: protocol + personal data (including memory log) load together, coaching responses use real personal context
-2. Start accumulating recipe/workout/strategy/memory history in the personal data source through real use
+1. Verify end-to-end: protocol + personal data (memory + nutrition logs included) load together, coaching responses use real personal context
+2. Start accumulating recipe/workout/strategy/memory/nutrition history in the personal data source through real use
 3. Revisit whether the Section 0 schema needs more/fewer fields once real coaching sessions surface gaps
 
 ## Key Files Updated This Cycle
 
-- `CLAUDE.md` — added memory-log field (Section 0) and coaching instruction (Section 22)
-- `BOOTSTRAP.md` — added memory log to the personal-source listing and write-back line
+- `CLAUDE.md` — added Daily Nutrition Metric (Section 5), updated Response Format (Section 25), added nutrition-log field (Section 0)
+- `BOOTSTRAP.md` — added nutrition log to the personal-source listing and write-back line
 - `README.md` — this file
 
 ---

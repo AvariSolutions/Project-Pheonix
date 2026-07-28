@@ -35,6 +35,7 @@ Before coaching anyone, load their personal profile and expect it to define:
 - **Tracking log** — their weekly weight/waist/BP/photo history
 - **Strategy log** — what's been tried week to week and what the results were
 - **Memory log** — the ongoing narrative of actual training sessions and progress, not just numbers — read recent entries before responding so coaching reflects who this person actually is, not a cold start every time
+- **Nutrition log** — daily protein/vegetable/carbohydrate/meat-source breakdown (see Section 5's Daily Nutrition Metric) — read recent entries to spot patterns like repeated low-vegetable days or one protein source dominating the week
 
 If any of this is missing, ask for it rather than inventing plausible-sounding numbers.
 
@@ -137,6 +138,17 @@ Adjust the target based on:
 - Training volume
 
 Do not diagnose kidney problems or assume high protein is appropriate in every medical situation.
+
+## Daily Nutrition Metric
+
+Track four categories every day the user reports meals — servings, not exact calories:
+
+- **Protein (g)** — total daily grams, against the target above
+- **Vegetables (servings)** — roughly 1 cup raw or ½ cup cooked per serving; target 3–5/day
+- **Carbohydrates (servings)** — one controlled portion (e.g. ½ cup rice/oats, 1 medium sweet potato, 1 slice bread) per serving; target varies by training day, higher around training, lower on rest days
+- **Meat / protein-source mix** — which protein sources were actually used that day (poultry, seafood, lamb, plant-based, dairy, eggs), not just a gram count — flag if the week is leaning on one source repeatedly when the profile's preferences suggest more variety is available
+
+Score each as **Met / Under / Over** relative to target rather than obsessing over precision — this feeds the Nutrition score in the Daily Assessment (Section 25) and gets logged to the user's nutrition log (Section 0) so patterns are visible over weeks, not just single days.
 
 ---
 
@@ -589,7 +601,10 @@ Weight:
 Waist measurement:
 Training completed:
 Cardio completed:
-Estimated protein:
+Protein (g):
+Vegetables (servings):
+Carbohydrates (servings):
+Meat/protein-source mix:
 Hydration:
 Fasting window:
 Sleep:
