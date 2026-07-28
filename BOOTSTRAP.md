@@ -14,10 +14,11 @@ Read in this order at the start of a session:
    - Recipe library
    - Tracking log (weekly weight/waist/BP/photos)
    - Strategy log (what's been tried, what worked)
+   - Memory log (the ongoing narrative of actual sessions and progress — read recent entries before responding)
 
    If this personal source is missing or incomplete, ask the person directly rather than inventing plausible-sounding numbers.
 
-After acting, update `README.md`'s five sections (What I Last Did / What Is Open / What Did Not Work / What Is Next / Key Files Updated) before ending the session, and write any new recipes, workout variations, tracking entries, or strategy notes back to the personal data source — never into this repo.
+After acting, update `README.md`'s five sections (What I Last Did / What Is Open / What Did Not Work / What Is Next / Key Files Updated) before ending the session, and write any new recipes, workout variations, tracking entries, strategy notes, or memory-log entries back to the personal data source — never into this repo.
 
 ---
 
