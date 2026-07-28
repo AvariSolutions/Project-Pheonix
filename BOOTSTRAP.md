@@ -16,10 +16,11 @@ Read in this order at the start of a session:
    - Strategy log (what's been tried, what worked)
    - Memory log (the ongoing narrative of actual sessions and progress — read recent entries before responding)
    - Nutrition log (daily protein/vegetable/carbohydrate/meat-source breakdown, per CLAUDE.md Section 5)
+   - Activity log (automated daily device data — steps, resting heart rate, sleep — if a device integration exists, per CLAUDE.md Section 19)
 
    If this personal source is missing or incomplete, ask the person directly rather than inventing plausible-sounding numbers.
 
-After acting, update `README.md`'s five sections (What I Last Did / What Is Open / What Did Not Work / What Is Next / Key Files Updated) before ending the session, and write any new recipes, workout variations, tracking entries, strategy notes, memory-log entries, or nutrition-log entries back to the personal data source — never into this repo.
+After acting, update `README.md`'s five sections (What I Last Did / What Is Open / What Did Not Work / What Is Next / Key Files Updated) before ending the session, and write any new recipes, workout variations, tracking entries, strategy notes, memory-log entries, nutrition-log entries, or activity-log entries back to the personal data source — never into this repo.
 
 ---
 

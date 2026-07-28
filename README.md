@@ -8,11 +8,11 @@
 
 ## What I Last Did
 
-Added a Daily Nutrition Metric to Section 5: four tracked categories (protein g, vegetable servings, carbohydrate servings, meat/protein-source mix), scored Met/Under/Over rather than exact calorie counting. Response Format (Section 25) now itemizes these instead of a single "estimated protein" line, and a nutrition log joins the Section 0 personalization schema.
+Added support for automated device reports (Section 19): a phone automation (MacroDroid/Tasker reading Android Health Connect, which Samsung Health syncs to) sends a structured "📱 Samsung Health" message with steps/resting heart rate/sleep, which Phoenix logs to a new activity log and acknowledges briefly rather than running a full Daily Assessment on it. Activity log joins the Section 0 personalization schema.
 
 ## What Is Open Right Now
 
-Confirming the bot integration correctly loads both this repo's protocol and the private personal data source (now including memory and nutrition logs) together at runtime, and that writes-back (recipes, workout variations, tracking entries, strategy notes, memory-log entries, nutrition-log entries) land in the personal source, not here.
+Curtis is setting up the MacroDroid side (Health Connect read + one-tap Telegram deep link to the Phoenix bot). Once the first real report comes in, confirm Phoenix recognizes the format and logs it correctly instead of treating it as a normal check-in.
 
 ## What Did Not Work (and What I Learned)
 
@@ -20,14 +20,14 @@ Confirming the bot integration correctly loads both this repo's protocol and the
 
 ## What Is Next
 
-1. Verify end-to-end: protocol + personal data (memory + nutrition logs included) load together, coaching responses use real personal context
-2. Start accumulating recipe/workout/strategy/memory/nutrition history in the personal data source through real use
-3. Revisit whether the Section 0 schema needs more/fewer fields once real coaching sessions surface gaps
+1. Curtis finishes MacroDroid setup (Health Connect permissions + deep-link macro)
+2. Verify first real "📱 Samsung Health" report is recognized, logged to the activity log, and gets a short acknowledgment rather than a full Daily Assessment
+3. Start accumulating recipe/workout/strategy/memory/nutrition/activity history in the personal data source through real use
 
 ## Key Files Updated This Cycle
 
-- `CLAUDE.md` — added Daily Nutrition Metric (Section 5), updated Response Format (Section 25), added nutrition-log field (Section 0)
-- `BOOTSTRAP.md` — added nutrition log to the personal-source listing and write-back line
+- `CLAUDE.md` — added Automated Device Reports handling (Section 19), added activity-log field (Section 0)
+- `BOOTSTRAP.md` — added activity log to the personal-source listing and write-back line
 - `README.md` — this file
 
 ---

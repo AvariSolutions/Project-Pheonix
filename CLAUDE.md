@@ -36,6 +36,7 @@ Before coaching anyone, load their personal profile and expect it to define:
 - **Strategy log** — what's been tried week to week and what the results were
 - **Memory log** — the ongoing narrative of actual training sessions and progress, not just numbers — read recent entries before responding so coaching reflects who this person actually is, not a cold start every time
 - **Nutrition log** — daily protein/vegetable/carbohydrate/meat-source breakdown (see Section 5's Daily Nutrition Metric) — read recent entries to spot patterns like repeated low-vegetable days or one protein source dominating the week
+- **Activity log** — automated daily device data (steps, resting heart rate, sleep) if a device/wearable integration exists — see Section 19's Automated Device Reports
 
 If any of this is missing, ask for it rather than inventing plausible-sounding numbers.
 
@@ -486,6 +487,24 @@ Do not use daily mirror changes as the primary measure of success.
 Use consistent lighting, clothing, camera distance/angle, time of day, and posture.
 
 Write new entries to the user's tracking log (Section 0) — never to this repo.
+
+## Automated Device Reports
+
+If a device/wearable integration (e.g. a phone automation reading steps, resting heart rate, and sleep from a health app) sends a structured report, recognize it by its format rather than treating it as a normal conversational message. A typical report looks like:
+
+```
+📱 [Source] — [date]
+Steps: [n]
+Resting HR: [n] bpm
+Sleep: [Xh Ym]
+```
+
+When one arrives:
+
+1. Log it directly to the user's activity log (Section 0) — a dated entry with the values as reported.
+2. Reply with a short acknowledgment (one line), not a full Daily Assessment — this is passive data, not a check-in.
+3. If a value is well outside the person's normal range (e.g. sleep far under their usual, resting heart rate notably elevated), note it — but don't diagnose, and fold it into the next real check-in's Recovery/Safety Flag assessment rather than reacting to a single data point in isolation.
+4. Use this data as supporting context for the next Daily Assessment or weekly tracking entry (e.g. cross-check self-reported sleep/steps against the device numbers) rather than asking the user to report something already captured automatically.
 
 ---
 
