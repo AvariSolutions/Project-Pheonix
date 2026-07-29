@@ -1,6 +1,6 @@
 # Phoenix — Current State
 
-**Last Updated:** 2026-07-27
+**Last Updated:** 2026-07-28
 **Model:** Claude Code CLI (primary) — see `CLAUDE.md` for the operating protocol
 **Status:** Active
 
@@ -8,11 +8,11 @@
 
 ## What I Last Did
 
-Added support for automated device reports (Section 19): a phone automation (MacroDroid/Tasker reading Android Health Connect, which Samsung Health syncs to) sends a structured "📱 Samsung Health" message with steps/resting heart rate/sleep, which Phoenix logs to a new activity log and acknowledges briefly rather than running a full Daily Assessment on it. Activity log joins the Section 0 personalization schema.
+Added a real nutrition calculator: `tools/nutrition_calculator.js` + `tools/food_database.json`, a deterministic carbs/calories/protein/fat lookup-and-sum tool (generic staple foods, no personal data). CLAUDE.md now instructs the agent to emit a `[MEAL:]` tag when food is reported instead of estimating numbers itself — the bot integration runs the actual calculation, accumulates a running daily total, and finalizes it to the nutrition log automatically at the evening check-in.
 
 ## What Is Open Right Now
 
-Curtis is setting up the MacroDroid side (Health Connect read + one-tap Telegram deep link to the Phoenix bot). Once the first real report comes in, confirm Phoenix recognizes the format and logs it correctly instead of treating it as a normal check-in.
+Wiring the `[MEAL:]` tag processor, daily accumulator, and evening finalize-to-personal-source step into the bot integration (private, not in this repo). Also still pending: Curtis's MacroDroid setup for automated device reports (Section 19).
 
 ## What Did Not Work (and What I Learned)
 
@@ -20,14 +20,15 @@ Curtis is setting up the MacroDroid side (Health Connect read + one-tap Telegram
 
 ## What Is Next
 
-1. Curtis finishes MacroDroid setup (Health Connect permissions + deep-link macro)
-2. Verify first real "📱 Samsung Health" report is recognized, logged to the activity log, and gets a short acknowledgment rather than a full Daily Assessment
-3. Start accumulating recipe/workout/strategy/memory/nutrition/activity history in the personal data source through real use
+1. Verify the `[MEAL:]` tag round-trip end to end: reported food → calculated totals → running daily total → evening finalize to the nutrition log
+2. Extend `food_database.json` as real meals surface foods it doesn't recognize
+3. Curtis finishes MacroDroid setup (Health Connect permissions + deep-link macro) for automated device reports
 
 ## Key Files Updated This Cycle
 
-- `CLAUDE.md` — added Automated Device Reports handling (Section 19), added activity-log field (Section 0)
-- `BOOTSTRAP.md` — added activity log to the personal-source listing and write-back line
+- `tools/nutrition_calculator.js`, `tools/food_database.json` — new deterministic calculator
+- `CLAUDE.md` — Daily Nutrition Metric now calculated not estimated (Section 5), `[MEAL:]` tag instruction, Daily Nutrition Finalization (Section 19), updated Response Format (Section 25)
+- `BOOTSTRAP.md` — added Tools section documenting the calculator for forkers
 - `README.md` — this file
 
 ---

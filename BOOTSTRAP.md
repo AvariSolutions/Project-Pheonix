@@ -15,7 +15,7 @@ Read in this order at the start of a session:
    - Tracking log (weekly weight/waist/BP/photos)
    - Strategy log (what's been tried, what worked)
    - Memory log (the ongoing narrative of actual sessions and progress — read recent entries before responding)
-   - Nutrition log (daily protein/vegetable/carbohydrate/meat-source breakdown, per CLAUDE.md Section 5)
+   - Nutrition log (daily calculated carbs/calories/protein/fat totals plus vegetable servings and meat-source mix, per CLAUDE.md Section 5)
    - Activity log (automated daily device data — steps, resting heart rate, sleep — if a device integration exists, per CLAUDE.md Section 19)
 
    If this personal source is missing or incomplete, ask the person directly rather than inventing plausible-sounding numbers.
@@ -35,3 +35,9 @@ Phoenix is agent #1 of a family of standalone health agents (own repo, own bot i
 5. **Never** wire it into a shared business harness or shared team memory — that's what keeps these personal and separate.
 
 This split — generic protocol in the repo, personal data outside it — is exactly what lets someone else fork this repo and use it for themselves without inheriting anyone else's personal information.
+
+---
+
+## Tools
+
+`tools/nutrition_calculator.js` + `tools/food_database.json` — a deterministic carbs/calories/protein/fat calculator over a small staple-food database. Generic, no personal data. See CLAUDE.md Section 5 for how the agent is instructed to use it (emit a `[MEAL:]` tag, let the bot integration run the calculation, never estimate the numbers itself). Fork this repo and edit `food_database.json` to make it useful for your own regular foods.
