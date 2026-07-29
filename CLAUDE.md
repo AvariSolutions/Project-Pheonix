@@ -30,7 +30,7 @@ Before coaching anyone, load their personal profile and expect it to define:
 - **Dietary preferences and exclusions** — allergies, foods they don't eat, cultural/ethical restrictions, preferred protein sources
 - **Daily schedule** — training window, meal timing, fasting preferences
 - **Medication / peptide protocol** — if any, with clinician-set timing rules (never agent-adjusted, see Section 11)
-- **Workout library** — whatever circuits/routines they already use and trust
+- **Workout library** — whatever circuits/routines they already use and trust, plus a growing index of researched/recommended options (see Section 12's Workout Research & Recommendation)
 - **Recipe library** — meals they already know and like
 - **Tracking log** — their weekly weight/waist/BP/photo history
 - **Strategy log** — what's been tried week to week and what the results were
@@ -300,6 +300,18 @@ Build the program around:
 Avoid assigning maximum intensity every day.
 
 Alternate demanding sessions with lighter or moderate sessions.
+
+## Workout Research & Recommendation
+
+When the user asks something open-ended like "what should I work on today" or "what am I working on" — a forward-looking request, not a report — respond like a coach in conversation, not with the Daily Assessment format (Section 25 is for logging what already happened):
+
+1. Check recent training history (memory log, strategy log — Section 0) to judge what's actually needed: a muscle group that hasn't been hit recently, whether today should be a lighter day, whether cardio is behind for the week.
+2. Check the existing workout library (Section 0) first — if something already there fits, offer it before researching something new.
+3. If new options would help, research 2–3 concrete ones that fit the need (equipment available, time, intensity) using a web search tool if you have one available. Don't invent exercises wholesale when you can find and adapt a real, specific routine.
+4. Present the options plainly — what each one is, why it fits today, roughly how long it takes — and let the user pick, or recommend one directly if they ask you to just decide.
+5. Once a workout is chosen and used, add it to the workout library (Section 0) so it's available next time instead of being researched again from scratch: name, category, source, when it's good for, the exercises themselves, and update it with notes after it's been used.
+
+The goal is that the library grows — the tenth time this comes up, you're offering from a real set of options built from what's actually worked, not generating something new every single time.
 
 ---
 

@@ -10,7 +10,7 @@ Read in this order at the start of a session:
    - Identity & baseline (name, height, starting/current/target weight, schedule)
    - Dietary preferences and exclusions
    - Medication/peptide protocol notes, if any
-   - Workout library
+   - Workout library (original circuits plus a growing researched/recommended index — see CLAUDE.md Section 12)
    - Recipe library
    - Tracking log (weekly weight/waist/BP/photos)
    - Strategy log (what's been tried, what worked)
@@ -41,3 +41,5 @@ This split — generic protocol in the repo, personal data outside it — is exa
 ## Tools
 
 `tools/nutrition_calculator.js` + `tools/food_database.json` — a deterministic carbs/calories/protein/fat calculator over a small staple-food database. Generic, no personal data. See CLAUDE.md Section 5 for how the agent is instructed to use it (emit a `[MEAL:]` tag, let the bot integration run the calculation, never estimate the numbers itself). Fork this repo and edit `food_database.json` to make it useful for your own regular foods.
+
+Workout research (CLAUDE.md Section 12) doesn't need a bundled tool the way nutrition math does — it relies on whatever web-search capability the deployed agent already has (e.g. Claude Code's own tool access), not a script in this repo. If your deployment doesn't have that, the agent should fall back to building recommendations from the exercise lists already in CLAUDE.md Sections 14–16.
